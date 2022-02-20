@@ -6,7 +6,6 @@ function draw() {
     var ctx = canvas.getContext('2d');
     var d = parseInt(input_d.value);
     var m = parseInt(input_m.value);
-    var s = parseInt(input_s.value);
     var center_x = canvas.width / 2;
     var center_y = canvas.height /2;
     var r = Math.min(canvas.width, canvas.height)/2-30;
@@ -54,5 +53,4 @@ function draw() {
 draw();
 input_m.onchange = draw;
 input_d.onchange = draw;
-input_s.onchange = draw;
 
