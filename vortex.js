@@ -19,13 +19,17 @@ function draw() {
     }
 
     ctx.clearRect(0,0,canvas.width,canvas.height);
+   
     // ctx.lineJoin = "round";
-    ctx.drawStyle = "black";
+    ctx.lineWidth = 10.0;
+    ctx.strokeStyle = "#808080";
     ctx.beginPath();
     ctx.arc(center_x, center_y, r, 0, 2*Math.PI);
     ctx.stroke();
-
-    ctx.lineWidth = 2.0;
+    
+    ctx.strokeStyle = "#000000";
+    ctx.lineWidth = 10.0 / Math.log(d);
+    ctx.lineWidth = 100/d;
     for (var i=0;i<d;++i) {
         ctx.beginPath();
         ctx.moveTo(x(i, r), y(i, r));
